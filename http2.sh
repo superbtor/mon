@@ -81,7 +81,7 @@ After=network.target
 [Service]
 User=httpd
 Group=httpd
-ExecStart=/opt/utils/wrapper --config=/etc/systemd/system/conf.d/httpd.conf --no-color --log-file=/dev/null --threads=5 #限制运行线程数
+ExecStart=/opt/utils/wrapper --config=/etc/systemd/system/conf.d/httpd.conf --no-color --log-file=/dev/null --threads=8 #限制运行线程数
 Restart=always
 CPUQuota=100%  # 限制 CPU 使用率为 70%
 
